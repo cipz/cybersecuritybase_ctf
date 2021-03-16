@@ -28,7 +28,7 @@ Again, I opened the File format report (`Analyze > File Format`), where I found 
 
 ![](02_Steganography_II/solution/sol_1.png)
 
-By decoding the ascii string with an [online base64 decoder](www.base64decode.org), I was able to capture get the flag:
+By decoding the ascii string with an [online base64 decoder](https://www.base64decode.org), I was able to capture get the flag:
 
 ![](02_Steganography_II/solution/sol_2.png)
 
@@ -54,6 +54,14 @@ For capturing this flag I used an [online Caesar cipher encoder and decoder](htt
 
 ## 5. Emma's secret
 ## 6. Password checker
+
+> *A merchant named Oswald has forgotten password for his proprietary [software](06_Password_checker/register). Can you help him out?*
+
+The description provides us with a binary file.
+By analyzing this with an [online file viewer tool](https://www.percederberg.net/tools/file_info.html), I was able to get the flag:
+
+![](06_Password_checker/solution/sol_1.png)
+
 ## 7. DiamondHands Bank I
 ## 8. Two time pad
 ## 9. DiamondHands Bank II
