@@ -17,7 +17,7 @@ I opened the File format report (`Analyze > File Format`), where I found the fla
 
 ## 2. Steganography II
 
-> More secrets in the [image](02_Steganography_II/bamboozled.jpg). Can you find it?
+> *More secrets in the [image](02_Steganography_II/bamboozled.jpg). Can you find it?*
 
 The description given for this exercise only links to the following `jpg` file:
 
@@ -34,7 +34,7 @@ By decoding the ascii string with an [online base64 decoder](www.base64decode.or
 
 ## 3. Dr. Strangelove
 
-> You have lost your key to Dr. Strangelove software and he is refusing to help you since he believes that those who are foolish enough to lose their keys don't deserve to use his products. Dr. Strangelove has suggested that you try to figure out what your key was. You can use his key validation service that is available [here](https://csb-capture-the-flag.cs.helsinki.fi/challenge-files/sites/strangelove/). 
+> *You have lost your key to Dr. Strangelove software and he is refusing to help you since he believes that those who are foolish enough to lose their keys don't deserve to use his products. Dr. Strangelove has suggested that you try to figure out what your key was. You can use his key validation service that is available [here](https://csb-capture-the-flag.cs.helsinki.fi/challenge-files/sites/strangelove/).*
 
 The description redirects to this website:
 
@@ -45,6 +45,13 @@ By viewing the source code of the webpage I saw the only JavaScript file was `te
 ![](03_Dr_Strangelove/solution/sol_2.png)
 
 ## 4. Cyber monkeys
+
+> *A troop of cyber monkeys decided to start a security consultancy. They claim that they invented a new unbreakable encryption scheme. Can you break the code: Jub xrrc fgrnyvat bhe onananf? Jr obhtug n arj fnsr naq gur cnffjbeq vf ZbaxrlObbmr.*
+
+For capturing this flag I used an [online Caesar cipher encoder and decoder](https://cryptii.com/pipes/caesar-cipher) to decipher the given string:
+
+![](04_Cyber_monkeys/solution/sol_1.png)
+
 ## 5. Emma's secret
 ## 6. Password checker
 ## 7. DiamondHands Bank I
