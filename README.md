@@ -33,6 +33,17 @@ By decoding the ascii string with an [online base64 decoder](www.base64decode.or
 ![](02_Steganography_II/solution/sol_2.png)
 
 ## 3. Dr. Strangelove
+
+> You have lost your key to Dr. Strangelove software and he is refusing to help you since he believes that those who are foolish enough to lose their keys don't deserve to use his products. Dr. Strangelove has suggested that you try to figure out what your key was. You can use his key validation service that is available [here](https://csb-capture-the-flag.cs.helsinki.fi/challenge-files/sites/strangelove/). 
+
+The description redirects to this website:
+
+![](03_Dr_Strangelove/solution/sol_1.png)
+
+By viewing the source code of the webpage I saw the only JavaScript file was `test.js`, in which I found the password, hidden in plain sight:
+
+![](03_Dr_Strangelove/solution/sol_2.png)
+
 ## 4. Cyber monkeys
 ## 5. Emma's secret
 ## 6. Password checker
@@ -52,3 +63,5 @@ By decoding the ascii string with an [online base64 decoder](www.base64decode.or
 ## 20. Steganography III
 ## 21. Password IV
 ## 22. Country roads
+
+# Personal considerations
