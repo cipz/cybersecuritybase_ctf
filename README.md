@@ -64,6 +64,19 @@ By analyzing this with an [online file viewer tool](https://www.percederberg.net
 
 ## 7. DiamondHands Bank I
 ## 8. Two time pad
+
+> *A shady man named Patches sends a message to Petrus using XOR and a one-time pad. You find out that the plain text message 'riches' encrypted is 'vjeomr'. Patches being stingy sends a new message 'glqfze' and reuses the pad. Decrypt the message.*
+
+To solve this challenge I used and [online XOR calculator](http://xor.pw/), since the description explicitly says *using XOR and a one-time pad*.
+
+First, I extracted the the pad by calculating the XOR between the cleartext and the encrypted string.
+
+![](08_Two_time_pad/solution/sol_1.png)
+
+Then, I got the cleartext of the second string by calculating the XOR between the previous result and the encrypted string:
+
+![](08_Two_time_pad/solution/sol_2.png)
+
 ## 9. DiamondHands Bank II
 ## 10. Logs logs logs
 ## 11. Password II
