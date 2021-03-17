@@ -155,6 +155,27 @@ This testes the various number combinations and outputs when the encrypyed text 
 ![](15_Lazy_passwords/solution/sol_2.png)
 
 ## 16. Password III
+
+> *A [program](16_Password_III/giftbox) written in C is given to you by the local carpenter. It uses a known library with a type declaration 'struct state { char input[2048]; int debug; };'. Can you find the secret?*
+
+Here the description has given a compiled C program file without extension.
+Thus, in order to execute it I added `.o` at the end of its name and tested it.
+
+```
+mv encrypter encrypter.o
+chmod +x *.o
+./encrypter.o
+```
+
+The program did nothing away and it only ouputed the given string.
+
+![](16_Password_III/solution/sol_1.png)
+
+Since the description gives away the fact that there is a struct with a *`char input[2048];`* immediately followed by an *`int debug;`*, I thought I could do a buffer overflow attack against the program.
+I then used python to print more than 2048 chars, that have been given in input to the program, which finally revealed the flag.
+
+![](16_Password_III/solution/sol_2.png)
+
 ## 17. Rise of the monkeys
 
 > *Cyber monkeys decided to change to military-grade encryption, and hashed their password to PLOJAINTZOCVIQIVAJSQVEKNND. Luckily, you got access to their [encrypter](17_Rise_of_the_monkeys/encrypter). Can you figure out the password? Hint: monkeys do like to SHOUT.*
@@ -168,9 +189,11 @@ Thus it is an executable built from cpp.
 
 I added the `.o` extension to the file and made it executable, and then I tested it:
 
-    mv encrypter encrypter.o
-    chmod +x *.o
-    ./encrypter.o
+```
+mv encrypter encrypter.o
+chmod +x *.o
+./encrypter.o
+```
 
 ![](17_Rise_of_the_monkeys/solution/sol_2.png)
 
