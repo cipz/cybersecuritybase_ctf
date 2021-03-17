@@ -80,6 +80,37 @@ For capturing this flag I used an [online Caesar cipher encoder and decoder](htt
 ![](04_Cyber_monkeys/solution/sol_1.png)
 
 ## 5. Emma's secret
+
+> *Emma has chosen two primes p=19 and q=23 for her RSA modulus n, and a public key e=7. She receives a cipher 42 that has been encrypted with her public key. What is the plaintext?*
+
+For solving this challenge I applied the [mathematical formulas related to the RSA algorithm](https://www.di-mgt.com.au/rsa_alg.html):
+
+```
+p = 19
+q = 23
+N = p*q = 437
+r = (p-1)*(q-1) = 396
+```
+
+To decrypt the ciphertext 42 (`m = 42`) given in the description, I applied the formula `m = c^d mod N`, where `d` is calculated as:
+
+```
+ed = 1 mod r
+7*d = 1 mod 396
+```
+
+Thus the value of `d` that satisfies the equation is `d = 283`.
+
+To get the flag `m` and solve the challenge I solved the following equation with the use of an [online modulus calculator](https://www.mtholyoke.edu/courses/quenell/s2003/ma139/js/powermod.html):
+
+```
+m = c^d mod N
+m = 42^283 mod 437
+m = 313
+```
+
+![](05_Emmas_secret/solution/sol_1.png)
+
 ## 6. Password checker
 
 > *A merchant named Oswald has forgotten password for his proprietary [software](06_Password_checker/register). Can you help him out?*
@@ -341,7 +372,29 @@ By opening the `test.js` file, I noticed the last function that prevented showin
 
 Thus I reopened the site in a smaller window and only afterwards I opened the console and made the window bigger.
 
+I couldn't find any useful hint by parsing the JavaScript file, so I decided to print again the loaded variables in the console and follow them back.
 
+```JavaScript
+for(var b in window) { 
+    if(window.hasOwnProperty(b)) console.log(b); 
+}
+```
+
+I couldn't find the declaration of the variable `wup` so I decided to print it and understand it better.
+
+![](19_Dr_Strangelove_strikes_back/solution/sol_2.png)
+
+This is a function that apparently contains the plaintext password, which is the flag.
+Upon further inspection `wup` is a function contained in `e`:
+
+```JavaScript
+var f = document.querySelector('input');
+var s = document.getElementById('status');
+function wup(e) {if (e.target.value == "SaintIsshin") {s.textContent = "Valid password!"} else {s.textContent = "Invalid password!"}}
+f.addEventListener('input', wup);
+```
+
+This is an external JavaScript file loaded by the line of code `$.getScript("e");`.
 
 ## 20. Steganography III
 
