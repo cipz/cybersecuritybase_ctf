@@ -63,6 +63,29 @@ By analyzing this with an [online file viewer tool](https://www.percederberg.net
 ![](06_Password_checker/solution/sol_1.png)
 
 ## 7. DiamondHands Bank I
+
+> *Rumour has it that [DiamondHands Bank](https://csb-diamond-bank.cs.helsinki.fi/), has a secret admin panel containing top secret information. Your client wants you to find it and to 'obtain' its secrets. The panel supposedly leaked previously when a popular search engine accidentally indexed it. However, security has been tightened since then.*
+
+The link in the description redirected me to the website of a fake bank in which I accessed with my university credentials.
+
+![](7_DiamondHands_Bank_I/solution/sol_1.png)
+
+Here there was nothing strange, the first thing that I could see was the balance, which was useless for the scope of this challenge.
+
+![](7_DiamondHands_Bank_I/solution/sol_2.png)
+
+The other pages were not useful as well since they did not give any particular information on what the flag was, neither contained bugs in the code.
+
+I tried searching for the hidden page on Google, Bing and DuckDuckGo, but none had any information about it.
+
+After confronting with other students, I discovered a hidden link in the [`robots.txt`](https://csb-diamond-bank.cs.helsinki.fi/robots.txt) file of the website.
+
+![](7_DiamondHands_Bank_I/solution/sol_3.png)
+
+In this secret panel there is the password for the database.
+
+![](7_DiamondHands_Bank_I/solution/sol_4.png)
+
 ## 8. Two time pad
 
 > *A shady man named Patches sends a message to Petrus using XOR and a one-time pad. You find out that the plain text message 'riches' encrypted is 'vjeomr'. Patches being stingy sends a new message 'glqfze' and reuses the pad. Decrypt the message.*
