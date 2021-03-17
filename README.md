@@ -189,7 +189,7 @@ Since I couldn't make out anything from the unminified code I printed all the Ja
 
 ```JavaScript
 for(var b in window) { 
-  if(window.hasOwnProperty(b)) console.log(b); 
+    if(window.hasOwnProperty(b)) console.log(b); 
 }
 ```
 
@@ -289,6 +289,46 @@ chmod +x *.o
 Without any arguments the script did not return anything, but by passing it the string given in the description, it revealed its secrets.
 
 ## 18. Cyber crime does pay
+
+> *The marketplace in [DiamondHands Bank](https://csb-diamond-bank.cs.helsinki.fi/) has information for sale that your 'friend' requires. Sadly, you lack the necessary funds to acquire this information. Use your hacking skills to obtain more currency and obtain the information.*
+
+This time the challenge requires buying the bank owner's password from the marketplace.
+
+![](18_Cyber_crime_does_pay/solution/sol_1.png)
+
+Since there are no visible flaws in the code and the checks on the exchanged amounts are done in the back end I had to automatize the conversion in order to gain the money and avoid doing it manually.
+For that I created a simple JS script that I fed to the [Custom JavaScript](https://chrome.google.com/webstore/detail/custom-javascript-for-webpoakhlngfciodnhlhhgnaaelnpjljija) plugin for Chrome.
+
+```JavaScript
+var balance = document.getElementsByClassName("card-block")[0].children[1].textContent
+var balance_split = balance.split(" ")
+
+var euros = balance_split[2]
+var cyber = balance_split[balance_split.length-4]
+
+
+if (euros >= 4){
+
+    document.getElementById("amount_").value = 4;
+
+} else {
+
+    document.getElementById("conversion").value="cyber_to_euros";
+    document.getElementById("amount_").value = cyber;
+    
+}
+
+document.getElementsByClassName("btn btn-primary")[1].click();	
+```
+
+I converted 4 euros instead of all the amount at the same time since it allowed me to maximize the amount of cybermoney gained when checking the decimal points.
+
+This simple code automates the conversion process by checking if I have enough euros to convert in cyber money, if true then I convert euros in cyber coins, otherwise I convert all cybercoins back to euros.
+
+In this way I was able to gain enough money to buy the key from the marketplace page.
+
+![](18_Cyber_crime_does_pay/solution/sol_2.png)
+
 ## 19. Dr. Strangelove strikes back!
 ## 20. Steganography III
 
