@@ -131,6 +131,26 @@ By playing around and starting to decode the usual words used in an email, such 
 ## 15. Lazy passwords
 ## 16. Password III
 ## 17. Rise of the monkeys
+
+> *Cyber monkeys decided to change to military-grade encryption, and hashed their password to PLOJAINTZOCVIQIVAJSQVEKNND. Luckily, you got access to their [encrypter](17_Rise_of_the_monkeys/encrypter). Can you figure out the password? Hint: monkeys do like to SHOUT.*
+
+Again, since the description has given us a file, I used the binary file analyzer from before to learn something more about it.
+
+Going through this file as binary did not give me any information about the flag, but I saw that it is an output of GCC, the *GNU Compiler Collection*.
+Thus it is an executable built from cpp.
+
+![](17_Rise_of_the_monkeys/solution/sol_1.png)
+
+I added the `.o` extension to the file and made it executable, and then I tested it:
+
+    mv encrypter encrypter.o
+    chmod +x *.o
+    ./encrypter.o
+
+![](17_Rise_of_the_monkeys/solution/sol_2.png)
+
+Without any arguments the script did not return anything, but by passing it the string given in the description, it revealed its secrets.
+
 ## 18. Cyber crime does pay
 ## 19. Dr. Strangelove strikes back!
 ## 20. Steganography III
