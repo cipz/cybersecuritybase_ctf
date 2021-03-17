@@ -193,11 +193,11 @@ for(var b in window) {
 }
 ```
 
-With the help of one of my german speaking friends I figured out that the word *kodieren* stands for *codec* and I took a look at it:
+With the help of one of my german speaking friends I, figured out that the word *kodieren* stands for *codec* and I took a look at what this function does:
 
 ![](13_Dr_Strangelove_Mk_II/solution/sol_1.png)
 
-The subtractions made not a lot of sense since the varible `wout` is an array of 4 times 65:
+The subtractions didn't make a lot of sense since the varible `wout` is an array of 4 times 65:
 
 ![](13_Dr_Strangelove_Mk_II/solution/sol_2.png)
 
@@ -330,6 +330,19 @@ In this way I was able to gain enough money to buy the key from the marketplace 
 ![](18_Cyber_crime_does_pay/solution/sol_2.png)
 
 ## 19. Dr. Strangelove strikes back!
+
+> *Impressive... most impressive. You have successfully cracked all previous Dr. Strangelove key validators. But now he has a brand new site with anti-cheating technology to make your job harder. Can you still crack [it](https://csb-capture-the-flag.cs.helsinki.fi/challenge-files/sites/strangelove-world/)?*
+
+The description redirects to the final level of the Dr. Strangelove challenges.
+When opened full screen on the browser, the website shows an `Intruder alert!` error.
+By opening the `test.js` file, I noticed the last function that prevented showing the contents of the website if the developer tools are open and if the window dimensions don't fall in a certain parameter.
+
+![](19_Dr_Strangelove_strikes_back/solution/sol_1.png)
+
+Thus I reopened the site in a smaller window and only afterwards I opened the console and made the window bigger.
+
+
+
 ## 20. Steganography III
 
 > *Something is hidden in the [image](20_Steganography_III/exhausted.jpg). Can you find it?*
