@@ -129,6 +129,31 @@ By playing around and starting to decode the usual words used in an email, such 
 ![](13_Dawn_of_the_monkeys/solution/sol_1.png)
 
 ## 15. Lazy passwords
+
+> *Gough Hawkeye's password is 'Kalameet2020' with a secure hash of '75784efcbe9cbd25aa0da913914640c2b2d1b2216979773e15e241703eef099d544ca120d8934b8d5112168866e28daf1a0f1bed01316fb0e222fea8204bb56b'. Gough decided to change his password but only changed the number. The new hash is '37ca33a0987bca0661504cd4ceba4989a048437d94df4b59170bbd5c00dba9ba0319afc61fd7bfd8343882ea9fd604804d3669a03d70a0fe02a6d6a9bd32bb15'. Can you figure out the new password?*
+
+At first for this challenge I had to understand the type of encryption used.
+Thus I did some tests with this [online encryption tool](), with which I understood that the encryption used is SHA512.
+
+![](15_Lazy_passwords/solution/sol_1.png)
+
+Since I did not get any good result by changing the numeric part from 2020 to 2021 or 2019, instead of manually trying the possible combinations I wrote a [python script](15_Lazy_passwords/guesser.py) that would do that for me.
+
+```python
+import hashlib
+
+text = "Kalameet"
+
+for i in range(1900, 2050):
+    tmp = hashlib.sha512(bytes(text + str(i), 'utf-8')).hexdigest()
+    if str(tmp) == "37ca33a0987bca0661504cd4ceba4989a048437d94df4b59170bbd5c00dba9ba0319afc61fd7bfd8343882ea9fd604804d3669a03d70a0fe02a6d6a9bd32bb15":
+        print(text + str(i))
+        exit()
+```
+This testes the various number combinations and outputs when the encrypyed text + number are equal to the string given in the description.
+
+![](15_Lazy_passwords/solution/sol_2.png)
+
 ## 16. Password III
 ## 17. Rise of the monkeys
 
