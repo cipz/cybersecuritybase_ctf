@@ -1,4 +1,31 @@
-# Cybersecurity Base 2020 / 2021 CTF
+# Cybersecurity Base 2020 / 2021 CTF solutions
+
+This repository contains the solutions and explanations of the CTF of the [Cyber Security Base 2021](https://cybersecuritybase.mooc.fi/) course at the University of Helsinki.
+
+- [Cybersecurity Base 2020 / 2021 CTF solutions](#cybersecurity-base-2020--2021-ctf-solutions)
+  - [1. Steganography I](#1-steganography-i)
+  - [2. Steganography II](#2-steganography-ii)
+  - [3. Dr. Strangelove](#3-dr-strangelove)
+  - [4. Cyber monkeys](#4-cyber-monkeys)
+  - [5. Emma's secret](#5-emmas-secret)
+  - [6. Password checker](#6-password-checker)
+  - [7. DiamondHands Bank I](#7-diamondhands-bank-i)
+  - [8. Two time pad](#8-two-time-pad)
+  - [9. DiamondHands Bank II](#9-diamondhands-bank-ii)
+  - [10. Logs logs logs](#10-logs-logs-logs)
+  - [11. Password II](#11-password-ii)
+  - [12. Monkeys are back](#12-monkeys-are-back)
+  - [13. Dr. Strangelove Mk II](#13-dr-strangelove-mk-ii)
+  - [14. Dawn of the monkeys](#14-dawn-of-the-monkeys)
+  - [15. Lazy passwords](#15-lazy-passwords)
+  - [16. Password III](#16-password-iii)
+  - [17. Rise of the monkeys](#17-rise-of-the-monkeys)
+  - [18. Cyber crime does pay](#18-cyber-crime-does-pay)
+  - [19. Dr. Strangelove strikes back!](#19-dr-strangelove-strikes-back)
+  - [20. Steganography III](#20-steganography-iii)
+  - [21. Password IV](#21-password-iv)
+  - [22. Country roads](#22-country-roads)
+- [Personal considerations](#personal-considerations)
 
 ## 1. Steganography I
 
