@@ -102,6 +102,19 @@ This is a base64 encoded string, thus to decode it and get the flag, I used the 
 ![](11_Password_II/solution/sol_2.png)
 
 ## 12. Monkeys are back
+
+> *Our cyber monkeys try to be clever and invented a better scheme for encryption. Or did they? Can you prove them wrong? 
+> Ciphertext: 'WWR5IHRqcCBuenogb2N6IGJwdCByZG9jIHYgcmpqeXppIHZtaA=='*
+
+Compared to the string given in challenge 4, this is a base64 encrypted string, so again I pasted the string in the online decoder from the previous challenges.
+
+![](12_Monkeys_are_back/solution/sol_1.png)
+
+This gave me a string which reminded me of the previously used cipher used by the monkeys.
+So I fed the string to the same Caesar cipher decoder to get the plaintext:
+
+![](12_Monkeys_are_back/solution/sol_2.png)
+
 ## 13. Dr. Strangelove Mk II
 ## 14. Dawn of the monkeys
 ## 15. Lazy passwords
