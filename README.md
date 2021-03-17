@@ -68,11 +68,11 @@ By analyzing this with an [online file viewer tool](https://www.percederberg.net
 
 The link in the description redirected me to the website of a fake bank in which I accessed with my university credentials.
 
-![](7_DiamondHands_Bank_I/solution/sol_1.png)
+![](07_DiamondHands_Bank_I/solution/sol_1.png)
 
 Here there was nothing strange, the first thing that I could see was the balance, which was useless for the scope of this challenge.
 
-![](7_DiamondHands_Bank_I/solution/sol_2.png)
+![](07_DiamondHands_Bank_I/solution/sol_2.png)
 
 The other pages were not useful as well since they did not give any particular information on what the flag was, neither contained bugs in the code.
 
@@ -80,11 +80,11 @@ I tried searching for the hidden page on Google, Bing and DuckDuckGo, but none h
 
 After confronting with other students, I discovered a hidden link in the [`robots.txt`](https://csb-diamond-bank.cs.helsinki.fi/robots.txt) file of the website.
 
-![](7_DiamondHands_Bank_I/solution/sol_3.png)
+![](07_DiamondHands_Bank_I/solution/sol_3.png)
 
 In this secret panel there is the password for the database.
 
-![](7_DiamondHands_Bank_I/solution/sol_4.png)
+![](07_DiamondHands_Bank_I/solution/sol_4.png)
 
 ## 8. Two time pad
 
@@ -101,6 +101,19 @@ Then, I got the cleartext of the second string by calculating the XOR between th
 ![](08_Two_time_pad/solution/sol_2.png)
 
 ## 9. DiamondHands Bank II
+
+> *[DiamondHands Bank](https://csb-diamond-bank.cs.helsinki.fi/) should have a hidden debugging mode in their Javascript code which should leak their secret backend key. Can you find it?*
+
+The website given in the description is the same from challenge 7.
+By checking the source code of the website, I found the JavaScript mentioned in the description.
+Even if it is minified I searched for the word *debugging*, which led me to this:
+
+![](09_DiamondHands_Bank_II/solution/sol_1.png)
+
+So I pasted the link to the json file to the root of the URL, which led me to get the flag:
+
+![](09_DiamondHands_Bank_II/solution/sol_2.png)
+
 ## 10. Logs logs logs
 
 > *A merchant asked you to find any leaks in his web site. You noticed that the developer wrote ...< form > < input type=text name=passwd >... So to prove a point you started searching the [logs](10_Logs_logs_logs/logs.zip).*
