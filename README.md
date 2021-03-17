@@ -117,6 +117,17 @@ So I fed the string to the same Caesar cipher decoder to get the plaintext:
 
 ## 13. Dr. Strangelove Mk II
 ## 14. Dawn of the monkeys
+
+> *The cyber monkeys are hoarding bananas and planning something. You intercept their email. Can you figure out access to the stash?*
+
+This was a particularly fun challenge to solve.
+At first, I tried to decipher the email with the usual Caesar cipher decoder, but, as expected, it did not work.
+Thus I thought the monkyes could have used a substitution cipher, thus I fed the given email in an [online alphabet substitution decoder](https://www.dcode.fr/monoalphabetic-substitution).
+
+By playing around and starting to decode the usual words used in an email, such as *From*, *To*, *dear*, I found the plaintext:
+
+![](13_Dawn_of_the_monkeys/solution/sol_1.png)
+
 ## 15. Lazy passwords
 ## 16. Password III
 ## 17. Rise of the monkeys
