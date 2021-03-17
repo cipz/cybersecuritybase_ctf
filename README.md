@@ -179,6 +179,32 @@ So I fed the string to the same Caesar cipher decoder to get the plaintext:
 ![](12_Monkeys_are_back/solution/sol_2.png)
 
 ## 13. Dr. Strangelove Mk II
+
+> *Dr. Strangelove is furious that you have cracked his key [service](https://csb-capture-the-flag.cs.helsinki.fi/challenge-files/sites/strangelove-returns/)! He has changed all of his keys and made a new validation service. Regain access. Firefox has problems with this puzzle, use Chrome instead.*
+
+As per the other challenges regarding this website, I first opened the JavaScript file with all the code.
+After looking around I found out that it was a simulator of the Enigma machine and that the array `r[]` represented the position of the rotors.
+
+Since I couldn't make out anything from the unminified code I printed all the JavaScript variables from the console in Chome with:
+
+```JavaScript
+for(var b in window) { 
+  if(window.hasOwnProperty(b)) console.log(b); 
+}
+```
+
+With the help of one of my german speaking friends I figured out that the word *kodieren* stands for *codec* and I took a look at it:
+
+![](13_Dr_Strangelove_Mk_II/solution/sol_1.png)
+
+The subtractions made not a lot of sense since the varible `wout` is an array of 4 times 65:
+
+![](13_Dr_Strangelove_Mk_II/solution/sol_2.png)
+
+Thus the solution can be found by printing the variable `t`:
+
+![](13_Dr_Strangelove_Mk_II/solution/sol_3.png)
+
 ## 14. Dawn of the monkeys
 
 > *The cyber monkeys are hoarding bananas and planning something. You intercept their [email](14_Dawn_of_the_monkeys/monkey_business.txt). Can you figure out access to the stash?*
