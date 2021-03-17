@@ -79,6 +79,15 @@ Then, I got the cleartext of the second string by calculating the XOR between th
 
 ## 9. DiamondHands Bank II
 ## 10. Logs logs logs
+
+> *A merchant asked you to find any leaks in his web site. You noticed that the developer wrote ...< form > < input type=text name=passwd >... So to prove a point you started searching the [logs](10_Logs_logs_logs/logs.zip).*
+
+The zip file provided by the description contains `acunetix.txt`.
+In here there are the the logs of a web server.
+Since the description mentions the passworkd is passed as a `type=text` variable in the URL, it can be found by searching *`passwd=`* in the file.
+
+![](10_Logs_logs_logs/solution/sol_1.png)
+
 ## 11. Password II
 ## 12. Monkeys are back
 ## 13. Dr. Strangelove Mk II
