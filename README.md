@@ -291,6 +291,22 @@ Without any arguments the script did not return anything, but by passing it the 
 ## 18. Cyber crime does pay
 ## 19. Dr. Strangelove strikes back!
 ## 20. Steganography III
+
+> *Something is hidden in the [image](20_Steganography_III/exhausted.jpg). Can you find it?*
+
+![](20_Steganography_III/exhausted.jpg)
+
+I believe that this challenge was particularly fun as well.
+The description provided an image that, after opening with the tool used in the previous steganography challenges, I discovered had some additional data appended to it.
+
+![](20_Steganography_III/solution/sol_1.png)
+
+From the first bytes and the equivalent ascii code, I understood that there was a `.rar` file appended to the image.
+After checking some hex to bin online tools that did not work correctly I ended up uzing [7zip](https://www.7-zip.org/) to extract the files contained in the appended zip.
+This revealed a `passwd.txt` file that contained the flag.
+
+![](20_Steganography_III/solution/sol_2.png)
+
 ## 21. Password IV
 ## 22. Country roads
 
