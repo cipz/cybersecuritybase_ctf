@@ -89,6 +89,18 @@ Since the description mentions the passworkd is passed as a `type=text` variable
 ![](10_Logs_logs_logs/solution/sol_1.png)
 
 ## 11. Password II
+
+> *The merchant that you helped has a friend that also needs [help](11_Password_II/counter). Can you help him?*
+
+The description provides a [counter](11_Password_II/counter) file.
+By using the same binary file analyzer from challenge 6, I was able to find the password hardcoded in the file:
+
+![](11_Password_II/solution/sol_1.png)
+
+This is a base64 encoded string, thus to decode it and get the flag, I used the same decoder from challenge 2:
+
+![](11_Password_II/solution/sol_2.png)
+
 ## 12. Monkeys are back
 ## 13. Dr. Strangelove Mk II
 ## 14. Dawn of the monkeys
