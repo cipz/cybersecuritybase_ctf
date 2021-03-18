@@ -25,7 +25,6 @@ This repository contains the solutions and explanations of the CTF of the [Cyber
   - [20. Steganography III](#20-steganography-iii)
   - [21. Password IV](#21-password-iv)
   - [22. Country roads](#22-country-roads)
-- [Personal considerations](#personal-considerations)
 
 ## 1. Steganography I
 
@@ -416,4 +415,22 @@ This revealed a `passwd.txt` file that contained the flag.
 ## 21. Password IV
 ## 22. Country roads
 
-# Personal considerations
+> *The president of Finnish municipality and l33t speaking appreciation society forgot his password. Here is the unshadowed information 'cybersecbase:$6$LwmDTb98$cIjJQLh.mC2qDP2EUgpLetTlcoQ7q4m0a7AuodF0xFBJKpxvKRLYMoSUe4db86be9PV9jHWDC0p.HwBR2p4cT.:1000:1000:csb,,,:/home/cybersecbase:/bin/bash'*
+
+Given the unhashed information, which contain the user account and the encrypted password, I tried using the infamous tool [John the Ripper](https://www.openwall.com/john/) to try and find the plain password.
+
+At first I tried running it without any arguments, then with `--single` and afterwards with `--incremental`.
+
+```bash
+sudo john passwords.txt
+sudo john --single passwords.txt
+sudo john --incremental passwords.txt
+```
+
+Since I had no luck with all these methods, especially with `--incremental`, which took hours without returning a useful password, I dediced to use a [wordlist](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiWpIfEkbrvAhWFi8MKHcG6B0sQFjAAegQIAxAD&url=https%3A%2F%2Fgithub.com%2Fbrannondorsey%2Fnaive-hashcat%2Freleases%2Fdownload%2Fdata%2Frockyou.txt&usg=AOvVaw3snAERl1mU6Ccr4WFEazBd) to check if it would contain the password.
+
+```bash
+sudo john passwords.txt --fork=8 --wordlist="rockyou.txt"
+```
+
+*Unfortunately at this time John the Ripper has not yet found the correct passworkd in this wordlist yet.*
