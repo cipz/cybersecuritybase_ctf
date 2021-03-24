@@ -413,6 +413,14 @@ This revealed a `passwd.txt` file that contained the flag.
 ![](20_Steganography_III/solution/sol_2.png)
 
 ## 21. Password IV
+
+> *Solaire has forgotten his password. Can you help him [out](/21_Password_IV/redstone)?*
+
+This challenge gives another binary file that appears to be a compiled c/c++ file when viewed with the previous online file analyzer.
+Afterwards I ran the program with `gdb` and looked for the flag in the registers, by setting breakpoints and controlling the status of the memory before and after inserting a string as password in the program.
+
+*Unfortunately I did not manage yet to find the hidden flag for this challenge.*
+
 ## 22. Country roads
 
 > *The president of Finnish municipality and l33t speaking appreciation society forgot his password. Here is the unshadowed information 'cybersecbase:$6$LwmDTb98$cIjJQLh.mC2qDP2EUgpLetTlcoQ7q4m0a7AuodF0xFBJKpxvKRLYMoSUe4db86be9PV9jHWDC0p.HwBR2p4cT.:1000:1000:csb,,,:/home/cybersecbase:/bin/bash'*
