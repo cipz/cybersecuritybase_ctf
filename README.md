@@ -441,4 +441,4 @@ Since I had no luck with all these methods, especially with `--incremental`, whi
 sudo john passwords.txt --fork=8 --wordlist="rockyou.txt"
 ```
 
-*Unfortunately at this time John the Ripper has not yet found the correct passworkd in this wordlist yet.*
+*Unfortunately at this time John the Ripper has not yet found the correct passworkd in this wordlist.*
